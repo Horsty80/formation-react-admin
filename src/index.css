@@ -36,4 +36,12 @@
   .navTitle {
     @apply relative block py-0 px-[10px] h-[60px] leading-[60px] text-left whitespace-nowrap;
   }
+  .curveOutsideAfter {
+    @apply content-[''] absolute right-0 bottom-[-50px] w-[50px] h-[50px] rounded-full
+     shadow-curveShadowAfter pointer-events-none bg-transparent;
+  }
+  .curveOutsideBefore {
+    @apply content-[''] absolute right-0 top-[-50px] w-[50px] h-[50px] rounded-full
+     shadow-curveShadowBefore pointer-events-none bg-transparent;
+  }
 }
