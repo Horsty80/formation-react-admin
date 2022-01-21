@@ -11,6 +11,16 @@ import {
 } from "@heroicons/react/outline";
 import NavItem from "./NavItem";
 
+const navItems = [
+  { icon: HomeIcon, title: "Dashboard" },
+  { icon: UserGroupIcon, title: "Customers" },
+  { icon: ChatIcon, title: "Messages" },
+  { icon: SupportIcon, title: "Help" },
+  { icon: CogIcon, title: "Settings" },
+  { icon: LockClosedIcon, title: "Password" },
+  { icon: LogoutIcon, title: "Signout" },
+];
+
 function Navigation() {
   return (
     <div className="fixed w-[300px] h-full bg-primary border-l-[10px] border-l-primary transition-all duration-500 overflow-hidden">
@@ -27,13 +37,9 @@ function Navigation() {
             </span>
           </a>
         </li>
-        <NavItem Icon={HomeIcon} title={"Dashboard"} />
-        <NavItem Icon={UserGroupIcon} title={"Customers"} />
-        <NavItem Icon={ChatIcon} title={"Messages"} />
-        <NavItem Icon={SupportIcon} title={"Help"} />
-        <NavItem Icon={CogIcon} title={"Settings"} />
-        <NavItem Icon={LockClosedIcon} title={"Password"} />
-        <NavItem Icon={LogoutIcon} title={"Signout"} />
+        {navItems.map((navItem, index) => (
+          <NavItem key={index} Icon={navItem.icon} title={navItem.title} />
+        ))}
       </ul>
     </div>
   );
