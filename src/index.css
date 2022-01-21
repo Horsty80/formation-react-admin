@@ -18,3 +18,22 @@
   --black1: #222;
   --black2: #999;
 }
+
+@layer components {
+  .navItem {
+    /* try 30px radius */
+    @apply relative w-full list-none rounded-tl-[30px] rounded-bl-[30px] hover:bg-white;
+  }
+  .navLink {
+    @apply relative w-full flex no-underline text-white hover:text-primary;
+  }
+  .navIcon {
+    @apply relative flex min-w-[60px] h-[60px] leading-[70px] items-center justify-center;
+  }
+  .navSvg {
+    @apply h-8 w-8;
+  }
+  .navTitle {
+    @apply relative block py-0 px-[10px] h-[60px] leading-[60px] text-left whitespace-nowrap;
+  }
+}
