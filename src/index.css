@@ -21,7 +21,6 @@
 
 @layer components {
   .navItem {
-    /* try 30px radius */
     @apply relative w-full list-none rounded-tl-[30px] rounded-bl-[30px] hover:bg-white;
   }
   .navLink {
@@ -36,12 +35,12 @@
   .navTitle {
     @apply relative block py-0 px-[10px] h-[60px] leading-[60px] text-left whitespace-nowrap;
   }
-  .curveOutsideAfter {
-    @apply content-[''] absolute right-0 bottom-[-50px] w-[50px] h-[50px] rounded-full
-     shadow-curveShadowAfter pointer-events-none bg-transparent;
-  }
-  .curveOutsideBefore {
-    @apply content-[''] absolute right-0 top-[-50px] w-[50px] h-[50px] rounded-full
-     shadow-curveShadowBefore pointer-events-none bg-transparent;
+  .curverOutside {
+    @apply hover:after:content-[''] hover:after:absolute hover:after:right-0 hover:after:bottom-[-50px]
+    hover:after:w-[50px] hover:after:h-[50px] hover:after:rounded-full
+    hover:after:shadow-curveShadowAfter hover:after:pointer-events-none hover:after:bg-transparent
+    hover:before:content-[''] hover:before:absolute hover:before:right-0 hover:before:top-[-50px]
+    hover:before:w-[50px] hover:before:h-[50px] hover:before:rounded-full
+    hover:before:shadow-curveShadowBefore hover:before:pointer-events-none hover:before:bg-transparent;
   }
 }
