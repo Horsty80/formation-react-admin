@@ -9,6 +9,7 @@ import {
   SupportIcon,
   UserGroupIcon,
 } from "@heroicons/react/outline";
+import NavItem from "./NavItem";
 
 function Navigation() {
   return (
@@ -26,62 +27,13 @@ function Navigation() {
             </span>
           </a>
         </li>
-        <li className="navItem">
-          <a className="navLink" href="#">
-            <span className="navIcon">
-              <HomeIcon className="navSvg" />
-            </span>
-            <span className="navTitle">Dashboard</span>
-          </a>
-        </li>
-        <li className="navItem">
-          <a className="navLink" href="#">
-            <span className="navIcon">
-              <UserGroupIcon className="navSvg" />
-            </span>
-            <span className="navTitle">Customers</span>
-          </a>
-        </li>
-        <li className="navItem">
-          <a className="navLink" href="#">
-            <span className="navIcon">
-              <ChatIcon className="navSvg" />
-            </span>
-            <span className="navTitle">Messages</span>
-          </a>
-        </li>
-        <li className="navItem">
-          <a className="navLink" href="#">
-            <span className="navIcon">
-              <SupportIcon className="navSvg" />
-            </span>
-            <span className="navTitle">Help</span>
-          </a>
-        </li>
-        <li className="navItem">
-          <a className="navLink" href="#">
-            <span className="navIcon">
-              <CogIcon className="navSvg" />
-            </span>
-            <span className="navTitle">Settings</span>
-          </a>
-        </li>
-        <li className="navItem">
-          <a className="navLink" href="#">
-            <span className="navIcon">
-              <LockClosedIcon className="navSvg" />
-            </span>
-            <span className="navTitle">Password</span>
-          </a>
-        </li>
-        <li className="navItem">
-          <a className="navLink" href="#">
-            <span className="navIcon">
-              <LogoutIcon className="navSvg" />
-            </span>
-            <span className="navTitle">Signout</span>
-          </a>
-        </li>
+        <NavItem Icon={HomeIcon} title={"Dashboard"} />
+        <NavItem Icon={UserGroupIcon} title={"Customers"} />
+        <NavItem Icon={ChatIcon} title={"Messages"} />
+        <NavItem Icon={SupportIcon} title={"Help"} />
+        <NavItem Icon={CogIcon} title={"Settings"} />
+        <NavItem Icon={LockClosedIcon} title={"Password"} />
+        <NavItem Icon={LogoutIcon} title={"Signout"} />
       </ul>
     </div>
   );
