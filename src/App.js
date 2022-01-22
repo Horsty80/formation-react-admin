@@ -1,4 +1,5 @@
 import CardsBox from "./components/CardsBox";
+import DetailsTable from "./components/DetailsTable";
 import Navigation from "./components/Navigation";
 import TopBar from "./components/TopBar";
 import useToggleNavigation from "./hooks/useToggleNavigation";
@@ -17,7 +18,7 @@ function App() {
       >
         <TopBar />
         <CardsBox />
-        {/* details tables */}
+        <DetailsTable />
       </div>
     </div>
   );

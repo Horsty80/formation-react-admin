@@ -63,4 +63,22 @@
   .kpiIcon {
     @apply h-10 w-10 text-black2;
   }
+  .deliveredStatus {
+    @apply py-[2px] px-1 bg-[#8de02c] text-white rounded-md text-sm font-medium;
+  }
+  .inProgressStatus {
+    @apply py-[2px] px-1 bg-[#1795ce] text-white rounded-md text-sm font-medium;
+  }
+  .returndStatus {
+    @apply py-[2px] px-1 bg-[#f00] text-white rounded-md text-sm font-medium;
+  }
+  .pendingStatus {
+    @apply py-[2px] px-1 bg-[#f9ca3f] text-white rounded-md text-sm font-medium;
+  }
+  .imgBx {
+    @apply relative w-[40px] h-[40px] rounded-full overflow-hidden;
+  }
+  .hoverEffect {
+    @apply bg-primary text-white;
+  }
 }

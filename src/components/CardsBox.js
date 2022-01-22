@@ -17,7 +17,7 @@ function CardsBox() {
           <div className="kpiValue group-hover:text-white">1,504</div>
           <div className="kpiLabel group-hover:text-white">Daily Views</div>
         </div>
-        <div class="iconBx">
+        <div className="iconBx">
           <EyeIcon className="kpiIcon group-hover:text-white" />
         </div>
       </div>
@@ -26,7 +26,7 @@ function CardsBox() {
           <div className="kpiValue group-hover:text-white">80</div>
           <div className="kpiLabel group-hover:text-white">Sales</div>
         </div>
-        <div class="iconBx">
+        <div className="iconBx">
           <ShoppingCartIcon className="kpiIcon group-hover:text-white" />
         </div>
       </div>
@@ -38,7 +38,7 @@ function CardsBox() {
           <div className="kpiValue group-hover:text-white">284</div>
           <div className="kpiLabel group-hover:text-white">Comments</div>
         </div>
-        <div class="iconBx">
+        <div className="iconBx">
           <ChatIcon className="kpiIcon group-hover:text-white" />
         </div>
       </div>
@@ -47,7 +47,7 @@ function CardsBox() {
           <div className="kpiValue group-hover:text-white">7,842€</div>
           <div className="kpiLabel group-hover:text-white">Earning</div>
         </div>
-        <div class="iconBx">
+        <div className="iconBx">
           <CurrencyEuroIcon className="kpiIcon group-hover:text-white" />
         </div>
       </div>
