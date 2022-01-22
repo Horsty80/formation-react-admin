@@ -53,6 +53,7 @@ function Navigation() {
             key={index}
             Icon={navItem.icon}
             title={navItem.title}
+            uri={navItem.uri}
             isActive={currentPath === navItem.uri}
           />
         ))}
