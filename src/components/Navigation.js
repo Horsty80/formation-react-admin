@@ -10,6 +10,7 @@ import {
   UserGroupIcon,
 } from "@heroicons/react/outline";
 import NavItem from "./NavItem";
+import useToggleNavigation from "../hooks/useToggleNavigation";
 
 const navItems = [
   { icon: HomeIcon, title: "Dashboard", uri: "/" },
@@ -28,8 +29,12 @@ function Navigation() {
     setCurrentPath(pathname);
   }, [setCurrentPath]);
 
+  const { isToggle } = useToggleNavigation();
+  const activeStyle = isToggle ? "w-[80px]" : "w-[300px]";
   return (
-    <div className="fixed w-[300px] h-full bg-primary border-l-[10px] border-l-primary transition-all duration-500 overflow-hidden">
+    <div
+      className={`${activeStyle} fixed h-full bg-primary border-l-[10px] border-l-primary transition-all duration-500 overflow-hidden`}
+    >
       <ul className="absolute top-0 left-0 w-full">
         <li className="navItem mb-10 pointer-events-none">
           <a className="navLink" href="#">
