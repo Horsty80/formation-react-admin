@@ -1,3 +1,4 @@
+import CardsBox from "./components/CardsBox";
 import Navigation from "./components/Navigation";
 import TopBar from "./components/TopBar";
 import useToggleNavigation from "./hooks/useToggleNavigation";
@@ -15,8 +16,7 @@ function App() {
         className={`${activeStyle} absolute min-h-[100vh] bg-white transition-all duration-500`}
       >
         <TopBar />
-        {/* topbar */}
-        {/* cardboxs */}
+        <CardsBox />
         {/* details tables */}
       </div>
     </div>

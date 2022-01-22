@@ -51,4 +51,16 @@
     before:w-[50px] before:h-[50px] before:rounded-full
     before:shadow-curveShadowBefore before:pointer-events-none before:bg-transparent;
   }
+  .cardKpi {
+    @apply relative bg-white p-5 rounded-3xl flex justify-between cursor-pointer shadow-card;
+  }
+  .kpiValue {
+    @apply relative font-bold text-2xl text-primary;
+  }
+  .kpiLabel {
+    @apply text-black2 text-sm mt-5;
+  }
+  .kpiIcon {
+    @apply h-10 w-10 text-black2;
+  }
 }
