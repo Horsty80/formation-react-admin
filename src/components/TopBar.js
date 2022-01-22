@@ -12,14 +12,18 @@ const TopBar = () => {
   const { toggleNavigation } = useToggleNavigation();
   return (
     <div className="w-full h-[60px] flex justify-between items-center py-0 px-[10px]">
-      <div className="relative w-[60px] h-[60px] flex justify-center items-center text-lg ">
+      <div
+        className="relative w-[60px] h-[60px] flex justify-center items-center text-lg"
+        data-testid="toggle"
+      >
         <MenuIcon
+          data-testid="toggleIcon"
           className="h-7 w-7 cursor-pointer"
           onClick={toggleNavigation}
         />
       </div>
       {/* <DummyComp toggleNavigation={toggleNavigation} /> */}
-      <div className="relative w-[400px] mx-0 my-[10px]">
+      <div className="relative w-[400px] mx-0 my-[10px]" data-testid="search">
         <label className="relative w-full">
           <input
             className="w-full h-[40px] rounded-3xl px-[5px] py-[20px] pl-[35px] text-lg outline-none border-[1px]"
@@ -29,7 +33,10 @@ const TopBar = () => {
           <SearchIcon className="absolute top-0 left-[10px] h-5 w-5" />
         </label>
       </div>
-      <div className="relative w-[40px] h-[40px] rounded-full overflow-hidden cursor-pointer">
+      <div
+        className="relative w-[40px] h-[40px] rounded-full overflow-hidden cursor-pointer"
+        data-testid="avatar"
+      >
         <img
           className="absolute top-0 left-0 w-full h-full object-cover"
           src={profilePicture}

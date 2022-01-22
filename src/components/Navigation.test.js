@@ -1,20 +1,34 @@
 import { render, screen } from "@testing-library/react";
+import { ToggleNavigationProvider } from "../hooks/useToggleNavigation";
 import Navigation from "./Navigation";
 
 describe("Navigation with all items", () => {
+  test("Should be collapse", () => {
+    render(
+      <ToggleNavigationProvider initialValue={true}>
+        <Navigation />
+      </ToggleNavigationProvider>
+    );
+    const navigation = screen.getByTestId("navigation");
+    expect(navigation).toHaveClass("w-[80px]");
+  });
+
+  test("Should be expand", () => {
+    render(
+      <ToggleNavigationProvider initialValue={false}>
+        <Navigation />
+      </ToggleNavigationProvider>
+    );
+    const navigation = screen.getByTestId("navigation");
+    expect(navigation).toHaveClass("w-[300px]");
+  });
+
   test("Should return a good number of li element", () => {
     render(<Navigation />);
     const listItem = screen.getAllByRole("listitem");
     expect(listItem.length).toBe(8);
   });
 
-  //   { icon: HomeIcon, title: "Dashboard" },
-  //   { icon: UserGroupIcon, title: "Customers" },
-  //   { icon: ChatIcon, title: "Messages" },
-  //   { icon: SupportIcon, title: "Help" },
-  //   { icon: CogIcon, title: "Settings" },
-  //   { icon: LockClosedIcon, title: "Password" },
-  //   { icon: LogoutIcon, title: "Signout" },
   test("Should return a good navElement element", () => {
     render(<Navigation />);
     expect(screen.getByText("Dashboard")).toBeDefined();

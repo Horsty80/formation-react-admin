@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import logo from "../logo.svg";
 import {
   ChatIcon,
@@ -23,16 +23,13 @@ const navItems = [
 ];
 
 function Navigation() {
-  const [currentPath, setCurrentPath] = useState("/");
-  useEffect(() => {
-    const pathname = window.location.pathname;
-    setCurrentPath(pathname);
-  }, [setCurrentPath]);
+  const [currentPath] = useState(window.location.pathname);
 
   const { isToggle } = useToggleNavigation();
   const activeStyle = isToggle ? "w-[80px]" : "w-[300px]";
   return (
     <div
+      data-testid="navigation"
       className={`${activeStyle} fixed h-full bg-primary border-l-[10px] border-l-primary transition-all duration-500 overflow-hidden`}
     >
       <ul className="absolute top-0 left-0 w-full">

@@ -8,11 +8,13 @@ import React, {
 
 const ToggleNavigationContext = createContext({});
 
-export const ToggleNavigationProvider = ({ children }) => {
-  const [isToggle, setIsToggle] = useState(false);
+export const ToggleNavigationProvider = ({
+  children,
+  initialValue = false,
+}) => {
+  const [isToggle, setIsToggle] = useState(initialValue);
 
   const toggleNavigation = useCallback(() => {
-    console.log("click");
     setIsToggle((v) => !v);
   }, []);
   // const toggleNavigation = () => {
