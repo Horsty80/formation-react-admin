@@ -13,17 +13,16 @@ import NavItem from "./NavItem";
 import useToggleNavigation from "../hooks/useToggleNavigation";
 
 const navItems = [
-  { icon: HomeIcon, title: "Dashboard", uri: "/" },
-  { icon: UserGroupIcon, title: "Customers", uri: "/customers" },
-  { icon: ChatIcon, title: "Messages", uri: "/messages" },
-  { icon: SupportIcon, title: "Help", uri: "/help" },
-  { icon: CogIcon, title: "Settings", uri: "/settings" },
-  { icon: LockClosedIcon, title: "Password", uri: "/password" },
+  { icon: HomeIcon, title: "Dashboard", uri: "#/" },
+  { icon: UserGroupIcon, title: "Customers", uri: "#/customers" },
+  { icon: ChatIcon, title: "Messages", uri: "#/messages" },
+  { icon: SupportIcon, title: "Help", uri: "#/help" },
+  { icon: CogIcon, title: "Settings", uri: "#/settings" },
+  { icon: LockClosedIcon, title: "Password", uri: "#/password" },
 ];
 
 function Navigation() {
   const [currentPath] = useState(window.location.pathname);
-
   const { isToggle } = useToggleNavigation();
   const activeStyle = isToggle ? "w-[80px]" : "w-[300px]";
   return (
@@ -33,7 +32,7 @@ function Navigation() {
     >
       <ul className="absolute top-0 left-0 w-full">
         <li className="navItem mb-10 pointer-events-none">
-          <a className="navLink" href="#">
+          <span className="navLink">
             <span className="navIcon mt-4 mr-4">
               <img
                 src={logo}
@@ -42,7 +41,7 @@ function Navigation() {
                 data-testid="app-logo"
               />
             </span>
-          </a>
+          </span>
         </li>
         {navItems.map((navItem, index) => (
           <NavItem
