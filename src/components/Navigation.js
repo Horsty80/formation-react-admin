@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../logo.svg";
 import {
   ChatIcon,
@@ -12,16 +12,22 @@ import {
 import NavItem from "./NavItem";
 
 const navItems = [
-  { icon: HomeIcon, title: "Dashboard" },
-  { icon: UserGroupIcon, title: "Customers" },
-  { icon: ChatIcon, title: "Messages" },
-  { icon: SupportIcon, title: "Help" },
-  { icon: CogIcon, title: "Settings" },
-  { icon: LockClosedIcon, title: "Password" },
-  { icon: LogoutIcon, title: "Signout" },
+  { icon: HomeIcon, title: "Dashboard", uri: "/" },
+  { icon: UserGroupIcon, title: "Customers", uri: "/customers" },
+  { icon: ChatIcon, title: "Messages", uri: "/messages" },
+  { icon: SupportIcon, title: "Help", uri: "/help" },
+  { icon: CogIcon, title: "Settings", uri: "/settings" },
+  { icon: LockClosedIcon, title: "Password", uri: "/password" },
+  { icon: LogoutIcon, title: "Signout", uri: "/signout" },
 ];
 
 function Navigation() {
+  const [currentPath, setCurrentPath] = useState("/");
+  useEffect(() => {
+    const pathname = window.location.pathname;
+    setCurrentPath(pathname);
+  }, [setCurrentPath]);
+
   return (
     <div className="fixed w-[300px] h-full bg-primary border-l-[10px] border-l-primary transition-all duration-500 overflow-hidden">
       <ul className="absolute top-0 left-0 w-full">
@@ -38,7 +44,12 @@ function Navigation() {
           </a>
         </li>
         {navItems.map((navItem, index) => (
-          <NavItem key={index} Icon={navItem.icon} title={navItem.title} />
+          <NavItem
+            key={index}
+            Icon={navItem.icon}
+            title={navItem.title}
+            isActive={currentPath === navItem.uri}
+          />
         ))}
       </ul>
     </div>
