@@ -3,12 +3,15 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import { ToggleNavigationProvider } from "./hooks/useToggleNavigation";
+import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
-    <ToggleNavigationProvider>
-      <App />
-    </ToggleNavigationProvider>
+    <BrowserRouter>
+      <ToggleNavigationProvider>
+        <App />
+      </ToggleNavigationProvider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );

@@ -1,26 +1,24 @@
-import CardsBox from "./components/CardsBox";
-import DetailsTable from "./components/DetailsTable";
-import Navigation from "./components/Navigation";
-import TopBar from "./components/TopBar";
-import useToggleNavigation from "./hooks/useToggleNavigation";
+import { Route, Routes } from "react-router-dom";
+import Customers from "./screens/Customers";
+import Dashboard from "./screens/Dashboard";
+import Help from "./screens/Help";
+import MainLayout from "./screens/MainLayout";
+import Messages from "./screens/Messages";
+import Password from "./screens/Password";
+import Settings from "./screens/Settings";
 
 function App() {
-  const { isToggle } = useToggleNavigation();
-  const activeStyle = isToggle
-    ? "left-[80px] w-[calc(100%-80px)]"
-    : "left-[300px] w-[calc(100%-300px)]";
   return (
-    <div>
-      <Navigation />
-      {/* main */}
-      <div
-        className={`${activeStyle} absolute min-h-[100vh] bg-white transition-all duration-500`}
-      >
-        <TopBar />
-        <CardsBox />
-        <DetailsTable />
-      </div>
-    </div>
+    <Routes>
+      <Route path="/" element={<MainLayout />}>
+        <Route index element={<Dashboard />} />
+        <Route path="customers" element={<Customers />} />
+        <Route path="help" element={<Help />} />
+        <Route path="messages" element={<Messages />} />
+        <Route path="settings" element={<Settings />} />
+        <Route path="password" element={<Password />} />
+      </Route>
+    </Routes>
   );
 }
 

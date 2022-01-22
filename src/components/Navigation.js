@@ -19,7 +19,6 @@ const navItems = [
   { icon: SupportIcon, title: "Help", uri: "/help" },
   { icon: CogIcon, title: "Settings", uri: "/settings" },
   { icon: LockClosedIcon, title: "Password", uri: "/password" },
-  { icon: LogoutIcon, title: "Signout", uri: "/signout" },
 ];
 
 function Navigation() {
@@ -54,6 +53,17 @@ function Navigation() {
             isActive={currentPath === navItem.uri}
           />
         ))}
+        <li className="navItem">
+          <button
+            className={`navLink curverOutside`}
+            onClick={() => alert("Bye bye")}
+          >
+            <span className="navIcon">
+              <LogoutIcon className="navSvg" data-testid="svg" />
+            </span>
+            <span className="navTitle">Signout</span>
+          </button>
+        </li>
       </ul>
     </div>
   );
