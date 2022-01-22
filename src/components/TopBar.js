@@ -1,5 +1,6 @@
 import { MenuIcon, SearchIcon } from "@heroicons/react/outline";
-import React, { memo } from "react";
+import React from "react";
+// import React, { memo } from "react";
 import profilePicture from "../assets/user.jpg";
 import useToggleNavigation from "../hooks/useToggleNavigation";
 
