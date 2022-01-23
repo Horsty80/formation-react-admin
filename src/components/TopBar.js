@@ -14,7 +14,7 @@ const TopBar = () => {
   return (
     <div className="w-full h-[60px] flex justify-between items-center py-0 px-[10px]">
       <div
-        className="relative w-[60px] h-[60px] flex justify-center items-center text-lg"
+        className="css-toggle relative w-[60px] h-[60px] flex justify-center items-center text-lg"
         data-testid="toggle"
       >
         <MenuIcon
@@ -35,7 +35,7 @@ const TopBar = () => {
         </label>
       </div>
       <div
-        className="relative w-[40px] h-[40px] rounded-full overflow-hidden cursor-pointer"
+        className="css-user relative w-[40px] h-[40px] rounded-full overflow-hidden cursor-pointer"
         data-testid="avatar"
       >
         <img

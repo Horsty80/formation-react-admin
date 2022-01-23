@@ -10,7 +10,7 @@ function CardsBox() {
   return (
     <div
       data-testid="cardBox"
-      className="relative w-full p-5 grid grid-cols-4 gap-[30px]"
+      className="css-cardBox"
     >
       <div data-testid="cardViews" className="cardKpi hover:bg-primary group">
         <div>

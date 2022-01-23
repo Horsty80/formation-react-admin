@@ -2,8 +2,8 @@ import React from "react";
 
 const DetailsTable = () => {
   return (
-    <div className="relative w-full p-5 grid grid-cols-[2fr_1fr] gap-[30px] mt-3">
-      <div className="relative grid min-h-[500px] bg-white p-5 rounded-md shadow-card">
+    <div className="css-details">
+      <div className="relative grid min-h-[500px] bg-white p-5 rounded-md shadow-card css-recentOrders">
         <div className="flex justify-between items-start">
           <h2 className="font-semibold text-primary">Recent Orders</h2>
           <button

@@ -24,11 +24,10 @@ const navItems = [
 function Navigation() {
   const [currentPath] = useState(window.location.pathname);
   const { isToggle } = useToggleNavigation();
-  const activeStyle = isToggle ? "w-[80px]" : "w-[300px]";
   return (
     <div
       data-testid="navigation"
-      className={`${activeStyle} fixed h-full bg-primary border-l-[10px] border-l-primary transition-all duration-500 overflow-hidden`}
+      className={`${isToggle ? "css-active" : ""} css-navigation`}
     >
       <ul className="absolute top-0 left-0 w-full">
         <li className="navItem mb-10 pointer-events-none">
@@ -36,7 +35,7 @@ function Navigation() {
             <span className="navIcon mt-4 mr-4">
               <img
                 src={logo}
-                className="h-full w-full bg-white px-3 rounded-[30px]"
+                className="rounded-full h-20 w-20 sm:h-full sm:w-full bg-white px-3 sm:rounded-[30px]"
                 alt="logo"
                 data-testid="app-logo"
               />

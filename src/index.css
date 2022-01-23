@@ -67,7 +67,7 @@
     @apply py-[2px] px-1 bg-[#8de02c] text-white rounded-md text-sm font-medium;
   }
   .inProgressStatus {
-    @apply py-[2px] px-1 bg-[#1795ce] text-white rounded-md text-sm font-medium;
+    @apply py-[2px] px-1 bg-[#1795ce] text-white rounded-md text-sm font-medium whitespace-nowrap;
   }
   .returndStatus {
     @apply py-[2px] px-1 bg-[#f00] text-white rounded-md text-sm font-medium;
