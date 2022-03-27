@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/formation-react-admin/static/css/main.8cf1d020.css",
-    "main.js": "/formation-react-admin/static/js/main.c5f88c36.js",
+    "main.css": "/formation-react-admin/static/css/main.3dbf5f64.css",
+    "main.js": "/formation-react-admin/static/js/main.ef959531.js",
     "static/media/img6.jpg": "/formation-react-admin/static/media/img6.e94fa6bf4eb3b69d0ac8.jpg",
     "static/media/img3.jpg": "/formation-react-admin/static/media/img3.950a687c9e9552df8e72.jpg",
     "static/media/img7.jpg": "/formation-react-admin/static/media/img7.53f68fbca72afff2267b.jpg",
@@ -12,11 +12,11 @@
     "static/media/img5.jpg": "/formation-react-admin/static/media/img5.c0ecd5b1133ff18876da.jpg",
     "static/media/logo.svg": "/formation-react-admin/static/media/logo.9047ec608be883c77faddc3c0c1b9d74.svg",
     "index.html": "/formation-react-admin/index.html",
-    "main.8cf1d020.css.map": "/formation-react-admin/static/css/main.8cf1d020.css.map",
-    "main.c5f88c36.js.map": "/formation-react-admin/static/js/main.c5f88c36.js.map"
+    "main.3dbf5f64.css.map": "/formation-react-admin/static/css/main.3dbf5f64.css.map",
+    "main.ef959531.js.map": "/formation-react-admin/static/js/main.ef959531.js.map"
   },
   "entrypoints": [
-    "static/css/main.8cf1d020.css",
-    "static/js/main.c5f88c36.js"
+    "static/css/main.3dbf5f64.css",
+    "static/js/main.ef959531.js"
   ]
 }
