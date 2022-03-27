@@ -9,6 +9,10 @@
 ### Let’s build !
 
 ```bash
+docker-compose -f docker-compose.dev.yml up
+```
+
+```bash
 npx create-react-app admin
 cd admin
 npm start
