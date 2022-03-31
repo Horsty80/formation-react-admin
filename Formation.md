@@ -12,6 +12,8 @@
 docker-compose -f docker-compose.dev.yml up
 ```
 
+Go to http://localhost:3000/
+
 ```bash
 npx create-react-app admin
 cd admin
