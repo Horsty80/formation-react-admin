@@ -8,7 +8,7 @@ WORKDIR /app
 # Cache and Install dependencies
 COPY package.json .
 COPY pnpm-lock.yaml .
-RUN pnpm install
+RUN pnpm i --frozen-lockfile
 # Copy app files
 COPY . .
 # Expose port
