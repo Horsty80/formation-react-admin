@@ -1,17 +1,11 @@
-import {
-  ChatIcon,
-  CurrencyEuroIcon,
-  EyeIcon,
-  ShoppingCartIcon,
-} from "@heroicons/react/outline";
-import React from "react";
+import { ChatIcon, CurrencyEuroIcon, EyeIcon, ShoppingCartIcon } from "@heroicons/react/outline";
+import React, { useContext } from "react";
+import { PriceContext } from "../contexts/PriceContext";
 
 function CardsBox() {
+  const { price, setPrice } = useContext(PriceContext);
   return (
-    <div
-      data-testid="cardBox"
-      className="css-cardBox"
-    >
+    <div data-testid="cardBox" className="css-cardBox">
       <div data-testid="cardViews" className="cardKpi hover:bg-primary group">
         <div>
           <div className="kpiValue group-hover:text-white">1,504</div>
@@ -30,10 +24,7 @@ function CardsBox() {
           <ShoppingCartIcon className="kpiIcon group-hover:text-white" />
         </div>
       </div>
-      <div
-        data-testid="cardComments"
-        className="cardKpi hover:bg-primary group"
-      >
+      <div data-testid="cardComments" className="cardKpi hover:bg-primary group">
         <div>
           <div className="kpiValue group-hover:text-white">284</div>
           <div className="kpiLabel group-hover:text-white">Comments</div>
@@ -43,8 +34,8 @@ function CardsBox() {
         </div>
       </div>
       <div data-testid="cardEarn" className="cardKpi hover:bg-primary group">
-        <div>
-          <div className="kpiValue group-hover:text-white">7,842€</div>
+        <div onClick={() => setPrice(price + 10)}>
+          <div className="kpiValue group-hover:text-white">{price}</div>
           <div className="kpiLabel group-hover:text-white">Earning</div>
         </div>
         <div className="iconBx">

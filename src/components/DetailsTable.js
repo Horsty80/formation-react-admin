@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
+import { PriceContext } from "../contexts/PriceContext";
 
 const DetailsTable = () => {
+  const { price, setPrice } = useContext(PriceContext);
   return (
     <div className="css-details">
       <div className="relative grid min-h-[500px] bg-white p-5 rounded-md shadow-card css-recentOrders">
@@ -25,7 +27,7 @@ const DetailsTable = () => {
           <tbody>
             <tr className="text-black box-border border-b p-5 hover:hoverEffect">
               <td className="p-[10px]">Star Refrogerator</td>
-              <td className="text-right p-[10px]">1200€</td>
+              <td className="text-right p-[10px]">{price}</td>
               <td className="text-center p-[10px]">Paid</td>
               <td className="text-right p-[10px]">
                 <span className="deliveredStatus">Delivered</span>
@@ -127,9 +129,7 @@ const DetailsTable = () => {
                 <h4 className="text-lg font-medium leading-4">
                   David
                   <br />
-                  <span className="text-black2 text-sm group-hover:text-white">
-                    Italy
-                  </span>
+                  <span className="text-black2 text-sm group-hover:text-white">Italy</span>
                 </h4>
               </td>
             </tr>
@@ -147,9 +147,7 @@ const DetailsTable = () => {
                 <h4 className="text-lg font-medium leading-4">
                   Muhammad
                   <br />
-                  <span className="text-black2 text-sm group-hover:text-white">
-                    India
-                  </span>
+                  <span className="text-black2 text-sm group-hover:text-white">India</span>
                 </h4>
               </td>
             </tr>
@@ -167,9 +165,7 @@ const DetailsTable = () => {
                 <h4 className="text-lg font-medium leading-4">
                   Amelia
                   <br />
-                  <span className="text-black2 text-sm group-hover:text-white">
-                    France
-                  </span>
+                  <span className="text-black2 text-sm group-hover:text-white">France</span>
                 </h4>
               </td>
             </tr>
@@ -187,9 +183,7 @@ const DetailsTable = () => {
                 <h4 className="text-lg font-medium leading-4">
                   Olivia
                   <br />
-                  <span className="text-black2 text-sm group-hover:text-white">
-                    USA
-                  </span>
+                  <span className="text-black2 text-sm group-hover:text-white">USA</span>
                 </h4>
               </td>
             </tr>
@@ -207,9 +201,7 @@ const DetailsTable = () => {
                 <h4 className="text-lg font-medium leading-4">
                   Amit
                   <br />
-                  <span className="text-black2 text-sm group-hover:text-white">
-                    Japan
-                  </span>
+                  <span className="text-black2 text-sm group-hover:text-white">Japan</span>
                 </h4>
               </td>
             </tr>
@@ -227,9 +219,7 @@ const DetailsTable = () => {
                 <h4 className="text-lg font-medium leading-4">
                   Ashraf
                   <br />
-                  <span className="text-black2 text-sm group-hover:text-white">
-                    India
-                  </span>
+                  <span className="text-black2 text-sm group-hover:text-white">India</span>
                 </h4>
               </td>
             </tr>
@@ -247,9 +237,7 @@ const DetailsTable = () => {
                 <h4 className="text-lg font-medium leading-4">
                   Diana
                   <br />
-                  <span className="text-black2 text-sm group-hover:text-white">
-                    Malaysia
-                  </span>
+                  <span className="text-black2 text-sm group-hover:text-white">Malaysia</span>
                 </h4>
               </td>
             </tr>
@@ -267,9 +255,7 @@ const DetailsTable = () => {
                 <h4 className="text-lg font-medium leading-4">
                   Amit
                   <br />
-                  <span className="text-black2 text-sm group-hover:text-white">
-                    India
-                  </span>
+                  <span className="text-black2 text-sm group-hover:text-white">India</span>
                 </h4>
               </td>
             </tr>
